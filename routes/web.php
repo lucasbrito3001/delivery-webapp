@@ -16,3 +16,14 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->group(['prefix' => 'api'], function () use ($router) {
+    $router->group(['prefix' => 'accounts'], function () use ($router) {
+
+    });
+
+    $router->group(['prefix' => 'products'], function () use ($router) {
+
+    });
+});
+
